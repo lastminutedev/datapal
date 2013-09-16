@@ -1,0 +1,28 @@
+﻿@model IEnumerable<DataPal.Models.IdTitlePair>
+
+@{
+    ViewBag.Title = "SimKimNews";
+}
+
+<h2>SimKim News</h2>
+
+<p class="main-admin-page-add-new-paragraph">
+    @Html.ActionLink("Add New News", "AddNewSimKimNews")
+</p>
+<table>
+    <tr>
+        <th>SimKimNews Collection:</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            Title: <h3 class="main-admin-page-h3">@item.Title</h3>
+            @Html.ActionLink("Edit", "EditSimKimNews", new { id=item.Id }) |
+            @Html.ActionLink("Details", "DetailsSimKimNews", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "DeleteSimKimNews", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

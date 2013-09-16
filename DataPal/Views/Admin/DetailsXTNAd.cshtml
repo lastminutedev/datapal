@@ -1,0 +1,49 @@
+﻿@model DataPal.Models.XTNAd
+
+@{
+    ViewBag.Title = "DetailsXTNAd";
+}
+<h2>Details XTNAd</h2>
+<div class="details-admin-page-wrapper">
+    <fieldset>
+        <legend>XTNAd</legend>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Title):
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Title)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.CreationDate):
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.CreationDate)
+        </div>
+        
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.LastModifiedDate):
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.LastModifiedDate)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Text):
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Text)
+        </div>
+
+        <div class="display-label">Author:</div>
+        <div class="display-field">
+             @ViewBag.UserAdded
+        </div>
+    </fieldset>
+    <p>
+        @Html.ActionLink("Edit", "EditXTNAd", new { id=Model.Id }) |
+        @Html.ActionLink("Delete", "DeleteXTNAd", new { id=Model.Id }) |
+        @Html.ActionLink("Back to List", "XTNAds")
+    </p>
+</div>

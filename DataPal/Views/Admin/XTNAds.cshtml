@@ -1,0 +1,28 @@
+﻿@model IEnumerable<DataPal.Models.IdTitlePair>
+
+@{
+    ViewBag.Title = "XTNAds";
+}
+
+<h2>XTN Ads</h2>
+
+<p class="main-admin-page-add-new-paragraph">
+    @Html.ActionLink("Add New Ad", "AddNewXTNAd")
+</p>
+<table>
+    <tr>
+        <th>XTNAds Collection:</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            Title: <h3 class="main-admin-page-h3">@item.Title</h3>
+            @Html.ActionLink("Edit", "EditXTNAd", new { id=item.Id }) |
+            @Html.ActionLink("Details", "DetailsXTNAd", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "DeleteXTNAd", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

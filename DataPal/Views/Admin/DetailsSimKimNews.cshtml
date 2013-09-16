@@ -1,0 +1,49 @@
+﻿@model DataPal.Models.SimKimNews
+
+@{
+    ViewBag.Title = "DetailsSimKimNews";
+}
+<h2>Details SimKimNews</h2>
+<div class="details-admin-page-wrapper">
+    <fieldset>
+        <legend>SimKimNews</legend>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Title):
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Title)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.CreationDate):
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.CreationDate)
+        </div>
+        
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.LastModifiedDate):
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.LastModifiedDate)
+        </div>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Text):
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Text)
+        </div>
+
+        <div class="display-label">Author:</div>
+        <div class="display-field">
+             @ViewBag.UserAdded
+        </div>
+    </fieldset>
+    <p>
+        @Html.ActionLink("Edit", "EditSimKimNews", new { id=Model.Id }) |
+        @Html.ActionLink("Delete", "DeleteSimKimNews", new { id=Model.Id }) |
+        @Html.ActionLink("Back to List", "SimKimNews")
+    </p>
+</div>

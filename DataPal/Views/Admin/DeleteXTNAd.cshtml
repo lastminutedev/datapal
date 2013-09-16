@@ -1,0 +1,27 @@
+﻿@model DataPal.Models.XTNAd
+
+@{
+    ViewBag.Title = "DeleteXTNAd";
+}
+<h2>Delete XTNAd</h2>
+<div class="delete-admin-page-wrapper">
+    <h3>Are you sure you want to delete this?</h3>
+    <fieldset>
+        <legend>XTNAd</legend>
+
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Title):
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Title)
+        </div>
+   
+    </fieldset>
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+        <p>
+            <input type="submit" value="Delete" /> |
+            @Html.ActionLink("Back to List", "XTNAds")
+        </p>
+    }
+</div>

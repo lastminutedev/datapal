@@ -1,0 +1,10 @@
+﻿@using (Html.BeginForm("AnonymousLogin", "Account", FormMethod.Get))
+{
+    @Html.AntiForgeryToken()
+    <fieldset id="anonymousLogin">
+        <legend>Log in anonymously:</legend>
+        <p>
+            <input type="submit" value="Anonymous Login" />
+        </p>
+    </fieldset>
+}

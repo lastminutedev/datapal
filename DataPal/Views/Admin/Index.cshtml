@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Admin Page";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p>
+            
+            </p>
+        </div>
+    </section>
+}
+<ol class="round">
+    <li class="one">
+        <h2>@Html.ActionLink("SimKimNews", "SimKimNews", "Admin")</h2>
+    </li>
+
+    <li class="two">
+        <h2>@Html.ActionLink("XTNAds", "XTNAds", "Admin")</h2>
+    </li>
+
+    <li class="three">
+       <h2></h2>
+    </li>
+</ol>
